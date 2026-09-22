@@ -1,2205 +1,2446 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Vismaad Store | Quality Food Products</title>
-
-<meta name="description"
-content="Shop Vismaad gluten free atta, multigrain atta, gluten free biscuits and quality food products online.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-:root{
-    --red:#a51d24;
-    --dark-red:#7d1118;
-    --gold:#c99a3b;
-    --cream:#fff8e9;
-    --light:#faf8f3;
-    --dark:#222;
-    --gray:#666;
-    --white:#fff;
-    --border:#e8e1d5;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:"DM Sans",sans-serif;
-    background:var(--light);
-    color:var(--dark);
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-button{
-    font-family:inherit;
-    cursor:pointer;
-}
-
-.container{
-    width:min(1180px,92%);
-    margin:auto;
-}
-
-
-/* ================= HEADER ================= */
-
-header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:rgba(255,255,255,.97);
-    border-bottom:1px solid var(--border);
-    backdrop-filter:blur(10px);
-}
-
-.navbar{
-    min-height:78px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:30px;
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    font-weight:800;
-}
-
-.logo img{
-    width:48px;
-    height:48px;
-    object-fit:contain;
-    border-radius:50%;
-}
-
-.logo-text{
-    line-height:1.05;
-}
-
-.logo-text strong{
-    display:block;
-    font-size:18px;
-    letter-spacing:1px;
-    color:var(--red);
-}
-
-.logo-text span{
-    font-size:10px;
-    letter-spacing:2px;
-    color:#555;
-}
-
-nav{
-    display:flex;
-    align-items:center;
-    gap:28px;
-}
-
-nav a{
-    font-size:14px;
-    font-weight:600;
-    color:#333;
-}
-
-nav a:hover{
-    color:var(--red);
-}
-
-.header-actions{
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
-.cart-btn{
-    position:relative;
-    width:46px;
-    height:46px;
-    border:1px solid var(--border);
-    background:#fff;
-    border-radius:50%;
-    font-size:20px;
-}
-
-.cart-count{
-    position:absolute;
-    top:-4px;
-    right:-2px;
-    min-width:20px;
-    height:20px;
-    padding:0 5px;
-    background:var(--red);
-    color:white;
-    border-radius:20px;
-    font-size:11px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:800;
-}
-
-
-/* ================= HERO ================= */
-
-.hero{
-    background:
-        radial-gradient(circle at 85% 25%,rgba(201,154,59,.15),transparent 25%),
-        linear-gradient(135deg,#fffaf0,#fff 60%,#fff4e4);
-    padding:85px 0;
-    overflow:hidden;
-}
-
-.hero-grid{
-    display:grid;
-    grid-template-columns:1.1fr .9fr;
-    align-items:center;
-    gap:60px;
-}
-
-.hero-label{
-    display:inline-block;
-    padding:8px 15px;
-    border-radius:30px;
-    background:rgba(165,29,36,.08);
-    color:var(--red);
-    font-size:13px;
-    font-weight:800;
-    margin-bottom:20px;
-}
-
-.hero h1{
-    font-family:"Playfair Display",serif;
-    font-size:clamp(42px,5vw,68px);
-    line-height:1.05;
-    margin-bottom:20px;
-}
-
-.hero h1 span{
-    color:var(--red);
-}
-
-.hero p{
-    max-width:570px;
-    color:var(--gray);
-    font-size:17px;
-    line-height:1.8;
-    margin-bottom:30px;
-}
-
-.hero-buttons{
-    display:flex;
-    gap:14px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    border:0;
-    border-radius:8px;
-    padding:14px 24px;
-    font-weight:800;
-    font-size:14px;
-    transition:.2s;
-}
-
-.btn-primary{
-    background:var(--red);
-    color:white;
-}
-
-.btn-primary:hover{
-    background:var(--dark-red);
-    transform:translateY(-2px);
-}
-
-.btn-outline{
-    background:white;
-    color:var(--red);
-    border:1px solid var(--red);
-}
-
-.btn-outline:hover{
-    background:var(--red);
-    color:white;
-}
-
-.hero-visual{
-    position:relative;
-    min-height:430px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-.hero-circle{
-    position:absolute;
-    width:380px;
-    height:380px;
-    border-radius:50%;
-    background:#f4dfb5;
-    opacity:.45;
-}
-
-.hero-card{
-    position:relative;
-    z-index:2;
-    width:330px;
-    background:white;
-    border-radius:25px;
-    padding:25px;
-    box-shadow:0 25px 70px rgba(0,0,0,.12);
-    text-align:center;
-}
-
-.hero-card img{
-    width:100%;
-    height:270px;
-    object-fit:contain;
-}
-
-.hero-card h3{
-    font-family:"Playfair Display",serif;
-    font-size:23px;
-    margin-top:10px;
-}
-
-.hero-card p{
-    margin:6px auto 0;
-    font-size:13px;
-}
-
-
-/* ================= TRUST BAR ================= */
-
-.trust-bar{
-    background:var(--red);
-    color:white;
-}
-
-.trust-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-}
-
-.trust-item{
-    text-align:center;
-    padding:23px 15px;
-    border-right:1px solid rgba(255,255,255,.25);
-}
-
-.trust-item:last-child{
-    border-right:0;
-}
-
-.trust-item strong{
-    display:block;
-    font-size:15px;
-    margin-bottom:4px;
-}
-
-.trust-item span{
-    font-size:12px;
-    opacity:.85;
-}
-
-
-/* ================= SECTION ================= */
-
-.section{
-    padding:80px 0;
-}
-
-.section-heading{
-    text-align:center;
-    margin-bottom:45px;
-}
-
-.section-heading small{
-    display:block;
-    color:var(--red);
-    font-weight:800;
-    text-transform:uppercase;
-    letter-spacing:2px;
-    margin-bottom:10px;
-    font-size:12px;
-}
-
-.section-heading h2{
-    font-family:"Playfair Display",serif;
-    font-size:42px;
-    margin-bottom:12px;
-}
-
-.section-heading p{
-    max-width:600px;
-    margin:auto;
-    color:var(--gray);
-    line-height:1.7;
-}
-
-
-/* ================= CATEGORIES ================= */
-
-.categories{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.category{
-    background:white;
-    border:1px solid var(--border);
-    border-radius:16px;
-    padding:25px;
-    text-align:center;
-    transition:.25s;
-}
-
-.category:hover{
-    transform:translateY(-5px);
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
-}
-
-.category-icon{
-    width:65px;
-    height:65px;
-    border-radius:50%;
-    margin:0 auto 15px;
-    background:var(--cream);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:28px;
-}
-
-.category h3{
-    margin-bottom:7px;
-}
-
-.category p{
-    color:var(--gray);
-    font-size:13px;
-}
-
-
-/* ================= SHOP ================= */
-
-.shop-section{
-    background:#fff;
-}
-
-.shop-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:30px;
-    gap:20px;
-}
-
-.shop-top h3{
-    font-family:"Playfair Display",serif;
-    font-size:28px;
-}
-
-.search-box{
-    display:flex;
-    width:320px;
-    max-width:100%;
-}
-
-.search-box input{
-    width:100%;
-    padding:13px 16px;
-    border:1px solid var(--border);
-    border-radius:8px 0 0 8px;
-    outline:none;
-    font-family:inherit;
-}
-
-.search-box button{
-    width:50px;
-    border:0;
-    background:var(--red);
-    color:white;
-    border-radius:0 8px 8px 0;
-}
-
-.products-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-}
-
-.product-card{
-    position:relative;
-    background:white;
-    border:1px solid var(--border);
-    border-radius:18px;
-    overflow:hidden;
-    transition:.25s;
-}
-
-.product-card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 18px 45px rgba(0,0,0,.1);
-}
-
-.product-image{
-    height:285px;
-    background:#faf7ef;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:18px;
-    position:relative;
-}
-
-.product-image img{
-    width:100%;
-    height:100%;
-    object-fit:contain;
-}
-
-.product-badge{
-    position:absolute;
-    top:14px;
-    left:14px;
-    background:var(--red);
-    color:white;
-    padding:6px 10px;
-    border-radius:20px;
-    font-size:11px;
-    font-weight:800;
-    z-index:2;
-}
-
-.product-info{
-    padding:20px;
-}
-
-.product-info h3{
-    font-size:18px;
-    margin-bottom:8px;
-}
-
-.product-description{
-    color:var(--gray);
-    font-size:13px;
-    line-height:1.6;
-    min-height:42px;
-}
-
-.product-bottom{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    margin-top:18px;
-    gap:10px;
-}
-
-.price{
-    font-size:20px;
-    font-weight:800;
-    color:var(--red);
-}
-
-.add-cart{
-    border:0;
-    background:var(--red);
-    color:white;
-    border-radius:7px;
-    padding:11px 14px;
-    font-size:12px;
-    font-weight:800;
-}
-
-.add-cart:hover{
-    background:var(--dark-red);
-}
-
-
-/* ================= OFFER ================= */
-
-.offer{
-    background:var(--red);
-    color:white;
-    border-radius:25px;
-    padding:45px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:30px;
-}
-
-.offer h2{
-    font-family:"Playfair Display",serif;
-    font-size:34px;
-    margin-bottom:8px;
-}
-
-.offer p{
-    opacity:.9;
-}
-
-.offer .btn{
-    background:white;
-    color:var(--red);
-    white-space:nowrap;
-}
-
-
-/* ================= WHY US ================= */
-
-.why-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
-
-.why-card{
-    background:white;
-    border:1px solid var(--border);
-    padding:28px 20px;
-    border-radius:16px;
-    text-align:center;
-}
-
-.why-icon{
-    font-size:30px;
-    margin-bottom:15px;
-}
-
-.why-card h3{
-    font-size:17px;
-    margin-bottom:8px;
-}
-
-.why-card p{
-    color:var(--gray);
-    font-size:13px;
-    line-height:1.6;
-}
-
-
-/* ================= FOOTER ================= */
-
-footer{
-    background:#211719;
-    color:white;
-    padding:60px 0 25px;
-}
-
-.footer-grid{
-    display:grid;
-    grid-template-columns:1.5fr 1fr 1fr;
-    gap:50px;
-    padding-bottom:40px;
-}
-
-.footer-brand img{
-    width:55px;
-    height:55px;
-    object-fit:contain;
-    border-radius:50%;
-    margin-bottom:15px;
-}
-
-.footer-brand p{
-    color:#c8c0c0;
-    max-width:350px;
-    line-height:1.7;
-    font-size:14px;
-}
-
-footer h3{
-    margin-bottom:18px;
-    font-size:16px;
-}
-
-footer ul{
-    list-style:none;
-}
-
-footer li{
-    margin-bottom:10px;
-    color:#c8c0c0;
-    font-size:14px;
-}
-
-footer li a:hover{
-    color:white;
-}
-
-.footer-bottom{
-    border-top:1px solid rgba(255,255,255,.12);
-    padding-top:20px;
-    text-align:center;
-    color:#aaa;
-    font-size:12px;
-}
-
-
-/* ================= WHATSAPP ================= */
-
-.whatsapp{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    width:56px;
-    height:56px;
-    background:#25D366;
-    color:white;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:28px;
-    z-index:900;
-    box-shadow:0 8px 25px rgba(0,0,0,.2);
-}
-
-
-/* ================= CART ================= */
-
-.cart-overlay{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.5);
-    z-index:1500;
-    display:none;
-}
-
-.cart-overlay.active{
-    display:block;
-}
-
-.cart-drawer{
-    position:fixed;
-    right:0;
-    top:0;
-    height:100vh;
-    width:min(420px,92%);
-    background:white;
-    z-index:1600;
-    transform:translateX(100%);
-    transition:.3s;
-    display:flex;
-    flex-direction:column;
-}
-
-.cart-drawer.active{
-    transform:translateX(0);
-}
-
-.cart-header{
-    padding:20px;
-    border-bottom:1px solid var(--border);
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.cart-header h2{
-    font-family:"Playfair Display",serif;
-}
-
-.close-cart{
-    border:0;
-    background:transparent;
-    font-size:25px;
-}
-
-.cart-items{
-    flex:1;
-    overflow-y:auto;
-    padding:20px;
-}
-
-.empty-cart{
-    text-align:center;
-    color:var(--gray);
-    padding:50px 10px;
-}
-
-.cart-item{
-    display:flex;
-    gap:12px;
-    border-bottom:1px solid var(--border);
-    padding:15px 0;
-}
-
-.cart-item img{
-    width:70px;
-    height:70px;
-    object-fit:contain;
-    background:#faf7ef;
-    border-radius:8px;
-}
-
-.cart-item-info{
-    flex:1;
-}
-
-.cart-item-info h4{
-    font-size:14px;
-    margin-bottom:5px;
-}
-
-.cart-item-price{
-    color:var(--red);
-    font-weight:800;
-    font-size:14px;
-}
-
-.quantity{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    margin-top:8px;
-}
-
-.quantity button{
-    width:26px;
-    height:26px;
-    border:1px solid var(--border);
-    background:white;
-    border-radius:5px;
-}
-
-.cart-footer{
-    border-top:1px solid var(--border);
-    padding:20px;
-}
-
-.subtotal{
-    display:flex;
-    justify-content:space-between;
-    font-weight:800;
-    font-size:18px;
-    margin-bottom:15px;
-}
-
-.checkout-btn{
-    width:100%;
-    padding:15px;
-    border:0;
-    border-radius:8px;
-    background:var(--red);
-    color:white;
-    font-weight:800;
-}
-
-
-/* ================= RESPONSIVE ================= */
-
-@media(max-width:950px){
-
-    nav{
-        display:none;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Vismaad Store | Quality Food Products</title>
+
+  <meta name="description"
+        content="Shop Vismaad Foods International gluten-free atta, multigrain atta, gluten-free biscuits and many more quality food products. Made in India.">
+
+  <meta name="keywords"
+        content="Vismaad, Vismaad Foods International, gluten free atta, multigrain atta, gluten free biscuits, Punjab, India">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+  <style>
+
+    :root {
+      --red: #a51d24;
+      --dark-red: #7d1118;
+      --gold: #c99a3b;
+      --cream: #fff8e9;
+      --light: #faf8f3;
+      --dark: #222222;
+      --gray: #666666;
+      --white: #ffffff;
+      --border: #eadfce;
+      --shadow: 0 10px 30px rgba(0,0,0,0.08);
     }
 
-    .hero-grid{
-        grid-template-columns:1fr;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    .hero-content{
-        text-align:center;
+    html {
+      scroll-behavior: smooth;
     }
 
-    .hero-content p{
-        margin-left:auto;
-        margin-right:auto;
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--dark);
+      background: var(--light);
+      line-height: 1.6;
     }
 
-    .hero-buttons{
-        justify-content:center;
+    img {
+      max-width: 100%;
+      display: block;
     }
 
-    .categories,
-    .products-grid{
-        grid-template-columns:repeat(2,1fr);
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
-    .why-grid{
-        grid-template-columns:repeat(2,1fr);
+    button {
+      font-family: inherit;
     }
 
-    .footer-grid{
-        grid-template-columns:1fr 1fr;
-    }
-}
+    /* =========================
+       HEADER
+    ========================= */
 
-
-@media(max-width:650px){
-
-    .navbar{
-        min-height:68px;
-    }
-
-    .logo img{
-        width:40px;
-        height:40px;
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.97);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
     }
 
-    .logo-text strong{
-        font-size:15px;
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      min-height: 78px;
+      padding: 10px 20px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
 
-    .logo-text span{
-        font-size:8px;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
 
-    .hero{
-        padding:55px 0;
+    .brand img {
+      width: 55px;
+      height: 55px;
+      object-fit: contain;
+      border-radius: 50%;
     }
 
-    .hero h1{
-        font-size:40px;
+    .brand-text {
+      line-height: 1.05;
     }
 
-    .hero p{
-        font-size:15px;
+    .brand-text strong {
+      display: block;
+      color: var(--red);
+      font-family: "Playfair Display", serif;
+      font-size: 22px;
+      letter-spacing: 1px;
     }
 
-    .hero-visual{
-        min-height:350px;
+    .brand-text span {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--gray);
+      margin-top: 4px;
     }
 
-    .hero-circle{
-        width:290px;
-        height:290px;
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
     }
 
-    .hero-card{
-        width:280px;
+    nav a {
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.2s;
     }
 
-    .hero-card img{
-        height:220px;
+    nav a:hover {
+      color: var(--red);
     }
 
-    .trust-grid{
-        grid-template-columns:1fr 1fr;
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
-    .trust-item{
-        border-bottom:1px solid rgba(255,255,255,.2);
+    .icon-btn {
+      width: 43px;
+      height: 43px;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      background: var(--white);
+      cursor: pointer;
+      font-size: 18px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      transition: 0.2s;
     }
 
-    .section{
-        padding:60px 0;
+    .icon-btn:hover {
+      background: var(--cream);
+      border-color: var(--gold);
     }
 
-    .section-heading h2{
-        font-size:34px;
+    .cart-btn {
+      position: relative;
     }
 
-    .categories,
-    .products-grid,
-    .why-grid{
-        grid-template-columns:1fr;
+    .cart-count {
+      position: absolute;
+      top: -4px;
+      right: -2px;
+
+      min-width: 20px;
+      height: 20px;
+      padding: 0 5px;
+
+      border-radius: 20px;
+      background: var(--red);
+      color: white;
+
+      font-size: 11px;
+      font-weight: 700;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .shop-top{
-        flex-direction:column;
-        align-items:stretch;
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      max-width: 1200px;
+      margin: 35px auto 0;
+      padding: 0 20px;
     }
 
-    .search-box{
-        width:100%;
+    .hero-card {
+      min-height: 510px;
+      border-radius: 28px;
+      overflow: hidden;
+      position: relative;
+      background: #222;
+
+      display: flex;
+      align-items: center;
     }
 
-    .offer{
-        padding:30px 22px;
-        flex-direction:column;
-        align-items:flex-start;
+    .hero-card img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
-    .offer h2{
-        font-size:28px;
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,0.78) 0%,
+          rgba(0,0,0,0.58) 42%,
+          rgba(0,0,0,0.10) 100%
+        );
     }
 
-    .footer-grid{
-        grid-template-columns:1fr;
-        gap:30px;
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 610px;
+      padding: 60px;
+      color: white;
     }
-}
 
-</style>
+    .made-in-india {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.3);
+
+      padding: 8px 14px;
+      border-radius: 30px;
+
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+
+      margin-bottom: 22px;
+    }
+
+    .hero-content h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(40px, 6vw, 70px);
+      line-height: 1.05;
+      margin-bottom: 18px;
+    }
+
+    .hero-content h1 span {
+      color: #f0c967;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      color: rgba(255,255,255,0.9);
+      max-width: 520px;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      border: none;
+      cursor: pointer;
+
+      padding: 14px 23px;
+      border-radius: 8px;
+
+      font-weight: 700;
+      font-size: 14px;
+
+      transition: 0.25s;
+    }
+
+    .btn-primary {
+      background: var(--red);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--dark-red);
+      transform: translateY(-2px);
+    }
+
+    .btn-light {
+      background: white;
+      color: var(--red);
+    }
+
+    .btn-light:hover {
+      background: var(--cream);
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+       TRUST BAR
+    ========================= */
+
+    .trust-bar {
+      max-width: 1200px;
+      margin: 20px auto 0;
+      padding: 0 20px;
+
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .trust-item {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .trust-icon {
+      width: 42px;
+      height: 42px;
+      flex-shrink: 0;
+
+      background: var(--cream);
+      border-radius: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 20px;
+    }
+
+    .trust-item strong {
+      display: block;
+      font-size: 14px;
+    }
+
+    .trust-item span {
+      display: block;
+      color: var(--gray);
+      font-size: 12px;
+    }
+
+    /* =========================
+       SECTION
+    ========================= */
+
+    .section {
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-heading .eyebrow {
+      color: var(--red);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .section-heading h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(30px, 5vw, 44px);
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+
+    .section-heading p {
+      max-width: 650px;
+      margin: auto;
+      color: var(--gray);
+    }
+
+    /* =========================
+       CATEGORIES
+    ========================= */
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .category {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 25px;
+      text-align: center;
+      cursor: pointer;
+
+      transition: 0.25s;
+    }
+
+    .category:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+      border-color: var(--gold);
+    }
+
+    .category-icon {
+      width: 65px;
+      height: 65px;
+      margin: 0 auto 15px;
+
+      border-radius: 50%;
+      background: var(--cream);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 29px;
+    }
+
+    .category h3 {
+      font-family: "Playfair Display", serif;
+      margin-bottom: 5px;
+    }
+
+    .category p {
+      color: var(--gray);
+      font-size: 13px;
+    }
+
+    /* =========================
+       SHOP
+    ========================= */
+
+    .shop-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .search-box {
+      display: flex;
+      max-width: 350px;
+      width: 100%;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 13px 15px;
+
+      border: 1px solid var(--border);
+      border-right: none;
+      border-radius: 8px 0 0 8px;
+
+      outline: none;
+      background: white;
+      font-family: inherit;
+    }
+
+    .search-box input:focus {
+      border-color: var(--gold);
+    }
+
+    .search-box button {
+      width: 48px;
+      border: none;
+      background: var(--red);
+      color: white;
+
+      border-radius: 0 8px 8px 0;
+      cursor: pointer;
+      font-size: 17px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .product-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+
+      transition: 0.25s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .product-image {
+      height: 260px;
+      background: #f6f1e7;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.35s;
+    }
+
+    .product-card:hover .product-image img {
+      transform: scale(1.04);
+    }
+
+    .badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+
+      background: var(--red);
+      color: white;
+
+      padding: 5px 9px;
+      border-radius: 5px;
+
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-category {
+      color: var(--red);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    .product-info h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 20px;
+      margin-bottom: 7px;
+    }
+
+    .product-info p {
+      color: var(--gray);
+      font-size: 13px;
+      min-height: 42px;
+      margin-bottom: 15px;
+    }
+
+    .product-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .price {
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--dark);
+    }
+
+    .add-btn {
+      border: none;
+      background: var(--red);
+      color: white;
+
+      padding: 10px 13px;
+      border-radius: 7px;
+
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 12px;
+
+      transition: 0.2s;
+    }
+
+    .add-btn:hover {
+      background: var(--dark-red);
+    }
+
+    /* =========================
+       OFFER
+    ========================= */
+
+    .offer {
+      background:
+        linear-gradient(
+          135deg,
+          var(--dark-red),
+          var(--red)
+        );
+
+      border-radius: 25px;
+      padding: 45px;
+
+      color: white;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 30px;
+    }
+
+    .offer-text {
+      max-width: 700px;
+    }
+
+    .offer-text .eyebrow {
+      color: #f0c967;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    .offer h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 38px;
+      margin: 8px 0;
+    }
+
+    .offer p {
+      color: rgba(255,255,255,0.85);
+    }
+
+    /* =========================
+       WHY US
+    ========================= */
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .why-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 30px;
+    }
+
+    .why-card .number {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+
+      background: var(--cream);
+      color: var(--red);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .why-card h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 21px;
+      margin-bottom: 8px;
+    }
+
+    .why-card p {
+      color: var(--gray);
+      font-size: 14px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #211b18;
+      color: white;
+      padding: 60px 20px 25px;
+      margin-top: 80px;
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 40px;
+    }
+
+    .footer-brand {
+      max-width: 350px;
+    }
+
+    .footer-brand .brand {
+      margin-bottom: 18px;
+    }
+
+    .footer-brand .brand-text strong {
+      color: white;
+    }
+
+    .footer-brand p {
+      color: #c8c1bc;
+      font-size: 14px;
+    }
+
+    .footer-column h3 {
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    .footer-column a {
+      display: block;
+      color: #c8c1bc;
+      font-size: 13px;
+      margin-bottom: 9px;
+    }
+
+    .footer-column a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 45px auto 0;
+      padding-top: 20px;
+
+      border-top: 1px solid rgba(255,255,255,0.12);
+
+      color: #aaa;
+      font-size: 12px;
+
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    /* =========================
+       WHATSAPP
+    ========================= */
+
+    .whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 900;
+
+      width: 58px;
+      height: 58px;
+
+      border-radius: 50%;
+      background: #25D366;
+      color: white;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 29px;
+
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      transition: 0.25s;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.08);
+    }
+
+    /* =========================
+       CART DRAWER
+    ========================= */
+
+    .cart-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      z-index: 1500;
+
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.25s;
+    }
+
+    .cart-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .cart-drawer {
+      position: fixed;
+      right: -430px;
+      top: 0;
+
+      width: min(430px, 100%);
+      height: 100vh;
+
+      background: white;
+      z-index: 1600;
+
+      box-shadow: -10px 0 30px rgba(0,0,0,0.12);
+
+      display: flex;
+      flex-direction: column;
+
+      transition: 0.3s;
+    }
+
+    .cart-drawer.active {
+      right: 0;
+    }
+
+    .cart-header {
+      padding: 22px;
+      border-bottom: 1px solid var(--border);
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .cart-header h2 {
+      font-family: "Playfair Display", serif;
+    }
+
+    .close-cart {
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-size: 25px;
+    }
+
+    .cart-items {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px;
+    }
+
+    .empty-cart {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--gray);
+    }
+
+    .cart-item {
+      display: grid;
+      grid-template-columns: 65px 1fr auto;
+      gap: 12px;
+      align-items: center;
+
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .cart-item img {
+      width: 65px;
+      height: 65px;
+      object-fit: contain;
+
+      background: #f6f1e7;
+      border-radius: 9px;
+    }
+
+    .cart-item h4 {
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .cart-item-price {
+      font-size: 12px;
+      color: var(--gray);
+    }
+
+    .quantity {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 7px;
+    }
+
+    .quantity button {
+      width: 25px;
+      height: 25px;
+      border: 1px solid var(--border);
+      background: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .remove-item {
+      color: var(--red);
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    .cart-footer {
+      padding: 20px;
+      border-top: 1px solid var(--border);
+    }
+
+    .cart-total {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 800;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .checkout-btn {
+      width: 100%;
+      border: none;
+      background: var(--red);
+      color: white;
+      padding: 15px;
+      border-radius: 8px;
+      font-weight: 800;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .checkout-btn:hover {
+      background: var(--dark-red);
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 1000px) {
+
+      nav {
+        display: none;
+      }
+
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .categories {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .trust-bar {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+
+      .nav {
+        min-height: 68px;
+        padding: 8px 14px;
+      }
+
+      .brand img {
+        width: 45px;
+        height: 45px;
+      }
+
+      .brand-text strong {
+        font-size: 17px;
+      }
+
+      .brand-text span {
+        font-size: 9px;
+        letter-spacing: 1.3px;
+      }
+
+      .hero {
+        margin-top: 18px;
+        padding: 0 12px;
+      }
+
+      .hero-card {
+        min-height: 570px;
+        border-radius: 20px;
+      }
+
+      .hero-content {
+        padding: 35px 25px;
+        align-self: flex-end;
+      }
+
+      .hero-content h1 {
+        font-size: 42px;
+      }
+
+      .hero-content p {
+        font-size: 15px;
+      }
+
+      .hero-overlay {
+        background:
+          linear-gradient(
+            0deg,
+            rgba(0,0,0,0.82) 0%,
+            rgba(0,0,0,0.35) 65%,
+            rgba(0,0,0,0.05) 100%
+          );
+      }
+
+      .trust-bar {
+        grid-template-columns: 1fr 1fr;
+        padding: 0 12px;
+      }
+
+      .trust-item {
+        padding: 13px;
+      }
+
+      .trust-item strong {
+        font-size: 12px;
+      }
+
+      .trust-item span {
+        font-size: 10px;
+      }
+
+      .section {
+        margin: 55px auto;
+        padding: 0 12px;
+      }
+
+      .categories {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .category {
+        padding: 18px 10px;
+      }
+
+      .shop-top {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .search-box {
+        max-width: none;
+      }
+
+      .products {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .product-image {
+        height: 190px;
+      }
+
+      .product-info {
+        padding: 14px;
+      }
+
+      .product-info h3 {
+        font-size: 17px;
+      }
+
+      .product-info p {
+        font-size: 11px;
+        min-height: auto;
+      }
+
+      .price {
+        font-size: 15px;
+      }
+
+      .add-btn {
+        padding: 8px 9px;
+        font-size: 10px;
+      }
+
+      .offer {
+        padding: 30px 22px;
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 20px;
+      }
+
+      .offer h2 {
+        font-size: 30px;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 20px;
+      }
+
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 430px) {
+
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .product-image {
+        height: 260px;
+      }
+
+      .categories {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .trust-bar {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
 </head>
-
 
 <body>
 
+  <!-- =========================
+       HEADER
+  ========================= -->
 
-<!-- ================= HEADER ================= -->
+  <header>
+    <div class="nav">
 
-<header>
+      <a href="#" class="brand">
 
-<div class="container navbar">
+        <img src="grok_1789630118526.jpg"
+             alt="Vismaad Foods International Logo">
 
-<a href="#home" class="logo">
+        <div class="brand-text">
+          <strong>VISMAAD</strong>
+          <span>FOODS INTERNATIONAL</span>
+        </div>
 
-<img src="grok_1789630118526.jpg"
-     alt="Vismaad Logo">
+      </a>
 
-<div class="logo-text">
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#categories">Categories</a>
+        <a href="#why-us">Why Vismaad</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-<strong>VISMAAD</strong>
+      <div class="nav-actions">
 
-<span>ONLINE STORE</span>
+        <button class="icon-btn cart-btn"
+                onclick="openCart()"
+                aria-label="Shopping Cart">
 
-</div>
+          🛒
+          <span class="cart-count" id="cartCount">0</span>
 
-</a>
+        </button>
 
+      </div>
 
-<nav>
+    </div>
+  </header>
 
-<a href="#home">Home</a>
 
-<a href="#shop">Shop</a>
+  <!-- =========================
+       HERO
+  ========================= -->
 
-<a href="#categories">Categories</a>
+  <main>
 
-<a href="#why-us">Why Vismaad</a>
+    <section class="hero" id="home">
 
-</nav>
+      <div class="hero-card">
 
+        <!-- OPENING IMAGE -->
+        <img src="Screenshot_2026-09-17-14-57-53-559_com.google.android.googlequicksearchbox-edit.jpg"
+             alt="Vismaad Foods International">
 
-<div class="header-actions">
+        <div class="hero-overlay"></div>
 
-<button class="cart-btn"
-        onclick="openCart()"
-        aria-label="Shopping Cart">
+        <div class="hero-content">
 
-🛒
+          <div class="made-in-india">
+            🇮🇳 MADE IN INDIA
+          </div>
 
-<span class="cart-count"
-      id="cartCount">0</span>
+          <h1>
+            Good Food.<br>
+            <span>Better Living.</span>
+          </h1>
 
-</button>
+          <p>
+            Quality food products made with care for modern Indian families.
+            Discover our gluten-free and wholesome range.
+          </p>
 
-</div>
+          <div class="hero-buttons">
 
-</div>
+            <a href="#shop" class="btn btn-primary">
+              Shop Now
+            </a>
 
-</header>
+            <a href="#categories" class="btn btn-light">
+              Explore Products
+            </a>
 
+          </div>
 
+        </div>
 
-<!-- ================= HERO ================= -->
+      </div>
 
-<section class="hero" id="home">
+    </section>
 
-<div class="container hero-grid">
 
+    <!-- =========================
+         TRUST BAR
+    ========================= -->
 
-<div class="hero-content">
+    <section class="trust-bar">
 
-<span class="hero-label">
-VISMAAD ONLINE STORE
-</span>
+      <div class="trust-item">
+        <div class="trust-icon">🇮🇳</div>
+        <div>
+          <strong>Made in India</strong>
+          <span>Proudly Indian</span>
+        </div>
+      </div>
 
+      <div class="trust-item">
+        <div class="trust-icon">🌾</div>
+        <div>
+          <strong>Quality Ingredients</strong>
+          <span>Carefully selected</span>
+        </div>
+      </div>
 
-<h1>
+      <div class="trust-item">
+        <div class="trust-icon">📦</div>
+        <div>
+          <strong>Freshly Packed</strong>
+          <span>Quality checked</span>
+        </div>
+      </div>
 
-Good Food.<br>
+      <div class="trust-item">
+        <div class="trust-icon">💬</div>
+        <div>
+          <strong>Easy Ordering</strong>
+          <span>WhatsApp support</span>
+        </div>
+      </div>
 
-<span>Better Living.</span>
+    </section>
 
-</h1>
 
+    <!-- =========================
+         CATEGORIES
+    ========================= -->
 
-<p>
+    <section class="section" id="categories">
 
-Shop quality food products from
-Vismaad Foods International.
-Explore our gluten free,
-multigrain and other carefully
-selected food products.
+      <div class="section-heading">
 
-</p>
+        <div class="eyebrow">
+          Shop by Category
+        </div>
 
+        <h2>
+          Goodness for Every Kitchen
+        </h2>
 
-<div class="hero-buttons">
+        <p>
+          Explore our growing range of quality food products.
+        </p>
 
-<a href="#shop"
-   class="btn btn-primary">
+      </div>
 
-Shop Now
 
-</a>
+      <div class="categories">
 
+        <div class="category"
+             onclick="scrollToShop()">
 
-<a href="#categories"
-   class="btn btn-outline">
+          <div class="category-icon">
+            🌾
+          </div>
 
-Explore Categories
+          <h3>Gluten Free</h3>
 
-</a>
+          <p>
+            Thoughtfully made gluten-free products.
+          </p>
 
-</div>
+        </div>
 
-</div>
 
+        <div class="category"
+             onclick="scrollToShop()">
 
+          <div class="category-icon">
+            🌿
+          </div>
 
-<div class="hero-visual">
+          <h3>Multigrain</h3>
 
-<div class="hero-circle"></div>
+          <p>
+            Wholesome grains for everyday meals.
+          </p>
 
+        </div>
 
-<div class="hero-card">
 
-<img src="IMG_20260917_111552.jpg"
-     alt="Vismaad Gluten Free Atta">
+        <div class="category"
+             onclick="scrollToShop()">
 
+          <div class="category-icon">
+            🍪
+          </div>
 
-<h3>
-Vismaad Gluten Free Atta
-</h3>
+          <h3>Biscuits</h3>
 
+          <p>
+            Delicious snacks for every occasion.
+          </p>
 
-<p>
-Quality food made with care.
-</p>
+        </div>
 
-</div>
 
-</div>
+        <div class="category"
+             onclick="scrollToShop()">
 
+          <div class="category-icon">
+            ✨
+          </div>
 
-</div>
+          <h3>More Products</h3>
 
-</section>
+          <p>
+            Discover our expanding range.
+          </p>
 
+        </div>
 
+      </div>
 
-<!-- ================= TRUST BAR ================= -->
+    </section>
 
-<section class="trust-bar">
 
-<div class="container trust-grid">
+    <!-- =========================
+         SHOP
+    ========================= -->
 
+    <section class="section" id="shop">
 
-<div class="trust-item">
+      <div class="section-heading">
 
-<strong>
-Gluten Free Range
-</strong>
+        <div class="eyebrow">
+          Our Products
+        </div>
 
-<span>
-Carefully selected products
-</span>
+        <h2>
+          Shop Vismaad
+        </h2>
 
-</div>
+        <p>
+          Quality products from Vismaad Foods International.
+        </p>
 
+      </div>
 
-<div class="trust-item">
 
-<strong>
-Made in India
-</strong>
+      <div class="shop-top">
 
-<span>
-Vismaad Foods International
-</span>
+        <div>
+          <strong id="productResultText">
+            Our Products
+          </strong>
+        </div>
 
-</div>
+        <div class="search-box">
 
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search products..."
+            onkeyup="searchProducts()"
+          >
 
-<div class="trust-item">
+          <button onclick="searchProducts()">
+            🔍
+          </button>
 
-<strong>
-Quality Food
-</strong>
+        </div>
 
-<span>
-Made with care
-</span>
+      </div>
 
-</div>
 
+      <div class="products" id="productGrid">
 
-<div class="trust-item">
 
-<strong>
-Easy Shopping
-</strong>
+        <!-- PRODUCT 1 -->
 
-<span>
-Simple online ordering
-</span>
+        <div class="product-card"
+             data-name="Vismaad Gluten Free Atta">
 
-</div>
+          <div class="product-image">
 
+            <span class="badge">
+              Gluten Free
+            </span>
 
-</div>
+            <img src="IMG_20260917_111552.jpg"
+                 alt="Vismaad Gluten Free Atta">
 
-</section>
+          </div>
 
+          <div class="product-info">
 
+            <div class="product-category">
+              Flour
+            </div>
 
-<!-- ================= CATEGORIES ================= -->
+            <h3>
+              Vismaad Gluten Free Atta
+            </h3>
 
-<section class="section"
-         id="categories">
+            <p>
+              A carefully prepared gluten-free flour for everyday cooking.
+            </p>
 
-<div class="container">
+            <div class="product-bottom">
 
+              <div class="price">
+                ₹ —
+              </div>
 
-<div class="section-heading">
+              <button
+                class="add-btn"
+                onclick="addToCart(
+                  'Vismaad Gluten Free Atta',
+                  0,
+                  'IMG_20260917_111552.jpg'
+                )">
 
-<small>
-Shop by category
-</small>
+                Add to Cart
 
-<h2>
-Explore Our Range
-</h2>
-
-<p>
-Discover products from the Vismaad range.
-More products and categories can be added
-as the store grows.
-</p>
-
-</div>
-
-
-
-<div class="categories">
-
-
-<a href="#shop"
-   class="category">
-
-<div class="category-icon">
-🌾
-</div>
-
-<h3>
-Gluten Free
-</h3>
-
-<p>
-Gluten free food products
-</p>
-
-</a>
-
-
-
-<a href="#shop"
-   class="category">
-
-<div class="category-icon">
-🌱
-</div>
-
-<h3>
-Multigrain
-</h3>
-
-<p>
-Nutritious multigrain products
-</p>
-
-</a>
-
-
-
-<a href="#shop"
-   class="category">
-
-<div class="category-icon">
-🍪
-</div>
-
-<h3>
-Biscuits & Snacks
-</h3>
-
-<p>
-Delicious Vismaad products
-</p>
-
-</a>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- ================= SHOP ================= -->
-
-<section class="section shop-section"
-         id="shop">
-
-<div class="container">
-
-
-<div class="section-heading">
-
-<small>
-Vismaad Store
-</small>
-
-<h2>
-Featured Products
-</h2>
-
-<p>
-Choose your products and add them
-to your shopping cart.
-</p>
-
-</div>
-
-
-
-<div class="shop-top">
-
-<h3>
-Our Products
-</h3>
-
-
-<div class="search-box">
-
-<input
-type="text"
-id="searchInput"
-placeholder="Search products..."
-onkeyup="searchProducts">
-
-
-<button onclick="searchProducts()">
-🔍
-</button>
-
-</div>
-
-</div>
-
-
-
-<div class="products-grid"
-     id="productsGrid">
-
-
-
-<!-- ================= PRODUCT 1 ================= -->
-
-<div class="product-card"
-     data-name="Vismaad Gluten Free Atta">
-
-
-<div class="product-image">
-
-<span class="product-badge">
-GLUTEN FREE
-</span>
-
-
-<img src="IMG_20260917_111552.jpg"
-     alt="Vismaad Gluten Free Atta">
-
-</div>
-
-
-
-<div class="product-info">
-
-<h3>
-Vismaad Gluten Free Atta
-</h3>
-
-
-<p class="product-description">
-
-Quality gluten free flour
-from Vismaad.
-
-</p>
-
-
-
-<div class="product-bottom">
-
-
-<span class="price">
-₹ —
-</span>
-
-
-<button
-class="add-cart"
-onclick="addToCart(
-'Vismaad Gluten Free Atta',
-0,
-'IMG_20260917_111552.jpg'
-)">
-
-Add to Cart
-
-</button>
-
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- ================= PRODUCT 2 ================= -->
-
-<div class="product-card"
-     data-name="Vismaad Multigrain Atta">
-
-
-<div class="product-image">
-
-
-<img
-src="file_0000000056188211a228e3de65db0d62.png"
-alt="Vismaad Multigrain Atta">
-
-</div>
-
-
-
-<div class="product-info">
-
-<h3>
-Vismaad Multigrain Atta
-</h3>
-
-
-<p class="product-description">
-
-A quality multigrain flour
-product from Vismaad.
-
-</p>
-
-
-
-<div class="product-bottom">
-
-
-<span class="price">
-₹ —
-</span>
-
-
-<button
-class="add-cart"
-onclick="addToCart(
-'Vismaad Multigrain Atta',
-0,
-'file_0000000056188211a228e3de65db0d62.png'
-)">
-
-Add to Cart
-
-</button>
-
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- ================= PRODUCT 3 ================= -->
-
-<div class="product-card"
-     data-name="Vismaad Gluten Free Biscuits">
-
-
-<div class="product-image">
-
-
-<span class="product-badge">
-VISMAAD
-</span>
-
-
-<img
-src="grok_1789629014292.jpg"
-alt="Vismaad Gluten Free Biscuits">
-
-</div>
-
-
-
-<div class="product-info">
-
-<h3>
-Vismaad Gluten Free Biscuits
-</h3>
-
-
-<p class="product-description">
-
-Delicious gluten free
-biscuits from Vismaad.
-
-</p>
-
-
-
-<div class="product-bottom">
-
-
-<span class="price">
-₹ —
-</span>
-
-
-<button
-class="add-cart"
-onclick="addToCart(
-'Vismaad Gluten Free Biscuits',
-0,
-'grok_1789629014292.jpg'
-)">
-
-Add to Cart
-
-</button>
-
-
-</div>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- ================= OFFER ================= -->
-
-<section class="section">
-
-<div class="container">
-
-
-<div class="offer">
-
-
-<div>
-
-<h2>
-Looking for Vismaad Products?
-</h2>
-
-<p>
-Shop online or contact us for product enquiries
-and bulk requirements.
-</p>
-
-</div>
-
-
-<a href="https://wa.me/919463948067"
-   target="_blank"
-   class="btn">
-
-WhatsApp Us
-
-</a>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- ================= WHY VISMAAD ================= -->
-
-<section class="section"
-         id="why-us">
-
-<div class="container">
-
-
-<div class="section-heading">
-
-<small>
-Why shop with us
-</small>
-
-<h2>
-The Vismaad Difference
-</h2>
-
-<p>
-Our online store is designed to make discovering
-and ordering Vismaad products simple.
-</p>
-
-</div>
-
-
-
-<div class="why-grid">
-
-
-<div class="why-card">
-
-<div class="why-icon">
-🌾
-</div>
-
-<h3>
-Gluten Free Range
-</h3>
-
-<p>
-Explore products from our gluten free range.
-</p>
-
-</div>
-
-
-
-<div class="why-card">
-
-<div class="why-icon">
-⭐
-</div>
-
-<h3>
-Quality Focus
-</h3>
-
-<p>
-Products made with attention to quality.
-</p>
-
-</div>
-
-
-
-<div class="why-card">
-
-<div class="why-icon">
-🛒
-</div>
-
-<h3>
-Easy Shopping
-</h3>
-
-<p>
-Add products to your cart and prepare your order.
-</p>
-
-</div>
-
-
-
-<div class="why-card">
-
-<div class="why-icon">
-💬
-</div>
-
-<h3>
-Customer Support
-</h3>
-
-<p>
-Contact our team through WhatsApp for assistance.
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-<div class="container">
-
-
-<div class="footer-grid">
-
-
-<div class="footer-brand">
-
-<img
-src="grok_1789630118526.jpg"
-alt="Vismaad Logo">
-
-
-<h3>
-Vismaad Foods International
-</h3>
-
-
-<p>
-
-Quality food products made with care,
-innovation and a commitment to better
-everyday nutrition.
-
-</p>
-
-</div>
-
-
-
-<div>
-
-<h3>
-Store
-</h3>
-
-<ul>
-
-<li>
-<a href="#shop">
-Shop Products
-</a>
-</li>
-
-<li>
-<a href="#categories">
-Categories
-</a>
-</li>
-
-<li>
-<a href="#shop">
-Cart
-</a>
-</li>
-
-</ul>
-
-</div>
-
-
-
-<div>
-
-<h3>
-Contact
-</h3>
-
-<ul>
-
-<li>
-Punjab, India
-</li>
-
-<li>
-+91 94639 48067
-</li>
-
-<li>
-
-<a href="https://wa.me/919463948067"
-   target="_blank">
-
-WhatsApp Us
-
-</a>
-
-</li>
-
-</ul>
-
-</div>
-
-
-</div>
-
-
-
-<div class="footer-bottom">
-
-© 2026 Vismaad Foods International.
-All Rights Reserved.
-
-</div>
-
-
-</div>
-
-</footer>
-
-
-
-<!-- ================= WHATSAPP ================= -->
-
-<a class="whatsapp"
-   href="https://wa.me/919463948067"
-   target="_blank"
-   aria-label="WhatsApp">
-
-💬
-
-</a>
-
-
-
-<!-- ================= CART OVERLAY ================= -->
-
-<div class="cart-overlay"
-     id="cartOverlay"
-     onclick="closeCart()">
-</div>
-
-
-
-<!-- ================= CART DRAWER ================= -->
-
-<div class="cart-drawer"
-     id="cartDrawer">
-
-
-<div class="cart-header">
-
-<h2>
-Your Cart
-</h2>
-
-
-<button
-class="close-cart"
-onclick="closeCart()">
-
-×
-
-</button>
-
-</div>
-
-
-
-<div class="cart-items"
-     id="cartItems">
-
-<div class="empty-cart">
-
-Your cart is empty.
-
-</div>
-
-</div>
-
-
-
-<div class="cart-footer">
-
-
-<div class="subtotal">
-
-<span>
-Subtotal
-</span>
-
-<span id="cartTotal">
-₹0
-</span>
-
-</div>
-
-
-<button
-class="checkout-btn"
-onclick="checkout()">
-
-Proceed to Checkout
-
-</button>
-
-
-</div>
-
-</div>
-
-
-
-<script>
-
-/* =====================================================
-   SHOPPING CART
-===================================================== */
-
-let cart = [];
-
-
-/* ================= ADD TO CART ================= */
-
-function addToCart(name, price, image){
-
-    const existing =
-        cart.find(item => item.name === name);
-
-
-    if(existing){
-
-        existing.quantity++;
-
-    }else{
-
-        cart.push({
-
-            name:name,
-
-            price:Number(price),
-
-            image:image,
-
-            quantity:1
-
-        });
-
-    }
-
-
-    updateCart();
-
-    openCart();
-
-}
-
-
-
-/* ================= UPDATE CART ================= */
-
-function updateCart(){
-
-    const cartItems =
-        document.getElementById("cartItems");
-
-    const cartCount =
-        document.getElementById("cartCount");
-
-    const cartTotal =
-        document.getElementById("cartTotal");
-
-
-    cartItems.innerHTML = "";
-
-
-    let total = 0;
-
-    let count = 0;
-
-
-    if(cart.length === 0){
-
-        cartItems.innerHTML =
-        '<div class="empty-cart">Your cart is empty.</div>';
-
-    }
-
-
-    cart.forEach((item,index)=>{
-
-        total += item.price * item.quantity;
-
-        count += item.quantity;
-
-
-        const div =
-            document.createElement("div");
-
-
-        div.className = "cart-item";
-
-
-        div.innerHTML = `
-
-            <img
-                src="${item.image}"
-                alt="${item.name}">
-
-
-            <div class="cart-item-info">
-
-                <h4>
-                    ${item.name}
-                </h4>
-
-
-                <div class="cart-item-price">
-
-                    ₹${item.price.toLocaleString("en-IN")}
-
-                </div>
-
-
-                <div class="quantity">
-
-
-                    <button
-                    onclick="changeQuantity(${index},-1)">
-
-                        −
-
-                    </button>
-
-
-                    <strong>
-                        ${item.quantity}
-                    </strong>
-
-
-                    <button
-                    onclick="changeQuantity(${index},1)">
-
-                        +
-
-                    </button>
-
-
-                    <button
-                    onclick="removeItem(${index})">
-
-                        🗑
-
-                    </button>
-
-
-                </div>
-
+              </button>
 
             </div>
 
-        `;
+          </div>
+
+        </div>
 
 
-        cartItems.appendChild(div);
+        <!-- PRODUCT 2 -->
 
-    });
+        <div class="product-card"
+             data-name="Vismaad Multigrain Atta">
+
+          <div class="product-image">
+
+            <span class="badge">
+              Wholesome
+            </span>
+
+            <img
+              src="file_0000000056188211a228e3de65db0d62.png"
+              alt="Vismaad Multigrain Atta"
+            >
+
+          </div>
+
+          <div class="product-info">
+
+            <div class="product-category">
+              Flour
+            </div>
+
+            <h3>
+              Vismaad Multigrain Atta
+            </h3>
+
+            <p>
+              A wholesome multigrain flour blend for everyday meals.
+            </p>
+
+            <div class="product-bottom">
+
+              <div class="price">
+                ₹ —
+              </div>
+
+              <button
+                class="add-btn"
+                onclick="addToCart(
+                  'Vismaad Multigrain Atta',
+                  0,
+                  'file_0000000056188211a228e3de65db0d62.png'
+                )">
+
+                Add to Cart
+
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
 
 
-    cartCount.textContent = count;
+        <!-- PRODUCT 3 -->
+
+        <div class="product-card"
+             data-name="Vismaad Gluten Free Biscuits">
+
+          <div class="product-image">
+
+            <span class="badge">
+              New
+            </span>
+
+            <img
+              src="grok_1789629014292.jpg"
+              alt="Vismaad Gluten Free Biscuits"
+            >
+
+          </div>
+
+          <div class="product-info">
+
+            <div class="product-category">
+              Biscuits
+            </div>
+
+            <h3>
+              Vismaad Gluten Free Biscuits
+            </h3>
+
+            <p>
+              Delicious gluten-free biscuits made for enjoyable snacking.
+            </p>
+
+            <div class="product-bottom">
+
+              <div class="price">
+                ₹ —
+              </div>
+
+              <button
+                class="add-btn"
+                onclick="addToCart(
+                  'Vismaad Gluten Free Biscuits',
+                  0,
+                  'grok_1789629014292.jpg'
+                )">
+
+                Add to Cart
+
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
 
 
-    cartTotal.textContent =
-        "₹" + total.toLocaleString("en-IN");
+        <!-- PRODUCT 4 -->
 
-}
+        <div class="product-card"
+             data-name="And Many More Vismaad Products">
+
+          <div class="product-image">
+
+            <div style="
+              width:100%;
+              height:100%;
+              display:flex;
+              align-items:center;
+              justify-content:center;
+              flex-direction:column;
+              background:linear-gradient(
+                135deg,
+                #fff8e9,
+                #f2e5cc
+              );
+              color:#a51d24;
+              text-align:center;
+              padding:20px;
+            ">
+
+              <div style="
+                font-family:'Playfair Display',serif;
+                font-size:42px;
+                margin-bottom:10px;
+              ">
+                +
+              </div>
+
+              <strong style="
+                font-size:20px;
+                font-family:'Playfair Display',serif;
+              ">
+                And Many More
+              </strong>
+
+              <span style="
+                font-size:12px;
+                color:#666;
+                margin-top:5px;
+              ">
+                Products coming soon
+              </span>
+
+            </div>
+
+          </div>
+
+          <div class="product-info">
+
+            <div class="product-category">
+              Coming Soon
+            </div>
+
+            <h3>
+              And Many More...
+            </h3>
+
+            <p>
+              More quality Vismaad products are coming to our store.
+            </p>
+
+            <div class="product-bottom">
+
+              <div class="price">
+                —
+              </div>
+
+              <button
+                class="add-btn"
+                onclick="alert('More products coming soon!')">
+
+                Coming Soon
+
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
 
 
+    <!-- =========================
+         OFFER
+    ========================= -->
 
-/* ================= QUANTITY ================= */
+    <section class="section">
 
-function changeQuantity(index,amount){
+      <div class="offer">
 
-    cart[index].quantity += amount;
+        <div class="offer-text">
+
+          <div class="eyebrow">
+            Vismaad Foods International
+          </div>
+
+          <h2>
+            Better Ingredients.<br>
+            Better Choices.
+          </h2>
+
+          <p>
+            We are continuously expanding our range of quality food products
+            made in India.
+          </p>
+
+        </div>
+
+        <a href="#shop"
+           class="btn btn-light">
+
+          Shop Products
+
+        </a>
+
+      </div>
+
+    </section>
 
 
-    if(cart[index].quantity <= 0){
+    <!-- =========================
+         WHY VISMAAD
+    ========================= -->
 
-        cart.splice(index,1);
+    <section class="section" id="why-us">
+
+      <div class="section-heading">
+
+        <div class="eyebrow">
+          Why Vismaad
+        </div>
+
+        <h2>
+          Made With Care
+        </h2>
+
+        <p>
+          Our focus is simple — quality food products for everyday life.
+        </p>
+
+      </div>
+
+
+      <div class="why-grid">
+
+        <div class="why-card">
+
+          <div class="number">
+            01
+          </div>
+
+          <h3>
+            Quality Focus
+          </h3>
+
+          <p>
+            We focus on carefully selected ingredients and consistent product
+            quality.
+          </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+          <div class="number">
+            02
+          </div>
+
+          <h3>
+            Made in India
+          </h3>
+
+          <p>
+            Our products are proudly developed and made in India.
+          </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+          <div class="number">
+            03
+          </div>
+
+          <h3>
+            Growing Range
+          </h3>
+
+          <p>
+            From gluten-free flour to biscuits and more, our product range is
+            continuously growing.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer id="contact">
+
+    <div class="footer-grid">
+
+
+      <div class="footer-brand">
+
+        <div class="brand">
+
+          <img
+            src="grok_1789630118526.jpg"
+            alt="Vismaad Foods International Logo"
+          >
+
+          <div class="brand-text">
+
+            <strong>
+              VISMAAD
+            </strong>
+
+            <span style="color:#c8c1bc;">
+              FOODS INTERNATIONAL
+            </span>
+
+          </div>
+
+        </div>
+
+        <p>
+          Good Food. Better Living. Quality food products proudly made in India.
+        </p>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h3>
+          Shop
+        </h3>
+
+        <a href="#shop">
+          Gluten Free Atta
+        </a>
+
+        <a href="#shop">
+          Multigrain Atta
+        </a>
+
+        <a href="#shop">
+          Gluten Free Biscuits
+        </a>
+
+        <a href="#shop">
+          More Products
+        </a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h3>
+          Quick Links
+        </h3>
+
+        <a href="#home">
+          Home
+        </a>
+
+        <a href="#categories">
+          Categories
+        </a>
+
+        <a href="#why-us">
+          Why Vismaad
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h3>
+          Contact
+        </h3>
+
+        <a href="tel:+919463948067">
+          📞 +91 94639 48067
+        </a>
+
+        <a
+          href="https://wa.me/919463948067"
+          target="_blank"
+          rel="noopener"
+        >
+          💬 WhatsApp Us
+        </a>
+
+        <a href="#shop">
+          🛒 Shop Online
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <span>
+        © 2026 Vismaad Foods International. All rights reserved.
+      </span>
+
+      <span>
+        Made in India 🇮🇳
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       WHATSAPP BUTTON
+  ========================= -->
+
+  <a
+    class="whatsapp"
+    href="https://wa.me/919463948067"
+    target="_blank"
+    rel="noopener"
+    aria-label="Chat on WhatsApp"
+  >
+    💬
+  </a>
+
+
+  <!-- =========================
+       CART OVERLAY
+  ========================= -->
+
+  <div
+    class="cart-overlay"
+    id="cartOverlay"
+    onclick="closeCart()">
+  </div>
+
+
+  <!-- =========================
+       CART DRAWER
+  ========================= -->
+
+  <aside
+    class="cart-drawer"
+    id="cartDrawer"
+  >
+
+    <div class="cart-header">
+
+      <h2>
+        Your Cart
+      </h2>
+
+      <button
+        class="close-cart"
+        onclick="closeCart()"
+        aria-label="Close cart"
+      >
+        ×
+      </button>
+
+    </div>
+
+
+    <div
+      class="cart-items"
+      id="cartItems"
+    >
+
+      <div class="empty-cart">
+        Your cart is empty.
+      </div>
+
+    </div>
+
+
+    <div class="cart-footer">
+
+      <div class="cart-total">
+
+        <span>
+          Total
+        </span>
+
+        <span id="cartTotal">
+          ₹0
+        </span>
+
+      </div>
+
+      <button
+        class="checkout-btn"
+        onclick="checkoutWhatsApp()"
+      >
+        Order on WhatsApp
+      </button>
+
+    </div>
+
+  </aside>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+
+  <script>
+
+    let cart = [];
+
+
+    /* =========================
+       ADD TO CART
+    ========================= */
+
+    function addToCart(name, price, image) {
+
+      const existing = cart.find(
+        item => item.name === name
+      );
+
+      if (existing) {
+
+        existing.quantity += 1;
+
+      } else {
+
+        cart.push({
+          name: name,
+          price: Number(price) || 0,
+          image: image,
+          quantity: 1
+        });
+
+      }
+
+      updateCart();
+
+      openCart();
 
     }
 
 
-    updateCart();
+    /* =========================
+       UPDATE CART
+    ========================= */
 
-}
+    function updateCart() {
 
+      const cartItems = document.getElementById("cartItems");
+      const cartCount = document.getElementById("cartCount");
+      const cartTotal = document.getElementById("cartTotal");
 
-
-/* ================= REMOVE ================= */
-
-function removeItem(index){
-
-    cart.splice(index,1);
-
-    updateCart();
-
-}
+      let totalItems = 0;
+      let totalPrice = 0;
 
 
+      cart.forEach(item => {
 
-/* ================= OPEN CART ================= */
+        totalItems += item.quantity;
+        totalPrice += item.price * item.quantity;
 
-function openCart(){
-
-    document
-    .getElementById("cartDrawer")
-    .classList.add("active");
+      });
 
 
-    document
-    .getElementById("cartOverlay")
-    .classList.add("active");
+      cartCount.textContent = totalItems;
 
-}
-
+      cartTotal.textContent =
+        "₹" + totalPrice.toLocaleString("en-IN");
 
 
-/* ================= CLOSE CART ================= */
+      if (cart.length === 0) {
 
-function closeCart(){
+        cartItems.innerHTML = `
+          <div class="empty-cart">
+            Your cart is empty.
+          </div>
+        `;
 
-    document
-    .getElementById("cartDrawer")
-    .classList.remove("active");
+        return;
 
-
-    document
-    .getElementById("cartOverlay")
-    .classList.remove("active");
-
-}
+      }
 
 
+      cartItems.innerHTML = cart.map(
+        (item, index) => `
 
-/* ================= SEARCH ================= */
+          <div class="cart-item">
 
-function searchProducts(){
+            <img
+              src="${item.image}"
+              alt="${item.name}"
+            >
 
-    const search =
-        document
-        .getElementById("searchInput")
-        .value
-        .toLowerCase()
-        .trim();
+            <div>
+
+              <h4>
+                ${item.name}
+              </h4>
+
+              <div class="cart-item-price">
+                ${item.price > 0
+                  ? "₹" + item.price.toLocaleString("en-IN")
+                  : "Price to be confirmed"}
+              </div>
+
+              <div class="quantity">
+
+                <button
+                  onclick="changeQuantity(${index}, -1)"
+                >
+                  −
+                </button>
+
+                <span>
+                  ${item.quantity}
+                </span>
+
+                <button
+                  onclick="changeQuantity(${index}, 1)"
+                >
+                  +
+                </button>
+
+              </div>
+
+              <button
+                class="remove-item"
+                onclick="removeFromCart(${index})"
+              >
+                Remove
+              </button>
+
+            </div>
+
+            <div>
+              ${
+                item.price > 0
+                ? "₹" +
+                  (item.price * item.quantity)
+                    .toLocaleString("en-IN")
+                : "—"
+              }
+            </div>
+
+          </div>
+
+        `
+      ).join("");
+
+    }
 
 
-    const products =
-        document.querySelectorAll(".product-card");
+    /* =========================
+       CHANGE QUANTITY
+    ========================= */
+
+    function changeQuantity(index, change) {
+
+      cart[index].quantity += change;
+
+      if (cart[index].quantity <= 0) {
+
+        cart.splice(index, 1);
+
+      }
+
+      updateCart();
+
+    }
 
 
-    products.forEach(product=>{
+    /* =========================
+       REMOVE ITEM
+    ========================= */
 
-        const name =
-            product.dataset.name.toLowerCase();
+    function removeFromCart(index) {
 
+      cart.splice(index, 1);
 
-        if(name.includes(search)){
+      updateCart();
 
-            product.style.display = "";
-
-        }else{
-
-            product.style.display = "none";
-
-        }
-
-    });
-
-}
+    }
 
 
+    /* =========================
+       OPEN CART
+    ========================= */
 
-/* ================= CHECKOUT ================= */
+    function openCart() {
 
-function checkout(){
+      document
+        .getElementById("cartDrawer")
+        .classList.add("active");
 
-    if(cart.length === 0){
+      document
+        .getElementById("cartOverlay")
+        .classList.add("active");
+
+      document.body.style.overflow = "hidden";
+
+    }
+
+
+    /* =========================
+       CLOSE CART
+    ========================= */
+
+    function closeCart() {
+
+      document
+        .getElementById("cartDrawer")
+        .classList.remove("active");
+
+      document
+        .getElementById("cartOverlay")
+        .classList.remove("active");
+
+      document.body.style.overflow = "";
+
+    }
+
+
+    /* =========================
+       WHATSAPP CHECKOUT
+    ========================= */
+
+    function checkoutWhatsApp() {
+
+      if (cart.length === 0) {
 
         alert("Your cart is empty.");
 
         return;
 
+      }
+
+
+      let message =
+        "Hello Vismaad Foods International,%0A%0A" +
+        "I would like to order:%0A";
+
+
+      cart.forEach(item => {
+
+        message +=
+          "%0A• " +
+          encodeURIComponent(item.name) +
+          " × " +
+          item.quantity;
+
+        if (item.price > 0) {
+
+          message +=
+            " — ₹" +
+            (item.price * item.quantity);
+
+        }
+
+      });
+
+
+      let total = cart.reduce(
+        (sum, item) =>
+          sum + (item.price * item.quantity),
+        0
+      );
+
+
+      if (total > 0) {
+
+        message +=
+          "%0A%0A" +
+          "Total: ₹" +
+          total.toLocaleString("en-IN");
+
+      }
+
+
+      message +=
+        "%0A%0APlease confirm availability, price and delivery details.";
+
+
+      window.open(
+        "https://wa.me/919463948067?text=" + message,
+        "_blank"
+      );
+
     }
 
 
-    let message =
-        "Hello Vismaad Foods International,%0A%0A" +
-        "I would like to place an order:%0A%0A";
+    /* =========================
+       SEARCH
+    ========================= */
+
+    function searchProducts() {
+
+      const input =
+        document
+          .getElementById("searchInput")
+          .value
+          .toLowerCase()
+          .trim();
 
 
-    cart.forEach(item=>{
-
-        message +=
-            item.name +
-            " x " +
-            item.quantity +
-            "%0A";
-
-    });
+      const products =
+        document.querySelectorAll(".product-card");
 
 
-    const total =
-        cart.reduce(
-            (sum,item)=>
-                sum + item.price * item.quantity,
-            0
-        );
+      let visible = 0;
 
 
-    message +=
-        "%0ATotal: ₹" +
-        total.toLocaleString("en-IN") +
-        "%0A%0A" +
-        "Please share the next steps for placing my order.";
+      products.forEach(product => {
+
+        const name =
+          product
+            .getAttribute("data-name")
+            .toLowerCase();
 
 
-    window.open(
-        "https://wa.me/919463948067?text=" + message,
-        "_blank"
+        if (
+          input === "" ||
+          name.includes(input)
+        ) {
+
+          product.style.display = "";
+
+          visible++;
+
+        } else {
+
+          product.style.display = "none";
+
+        }
+
+      });
+
+
+      document.getElementById(
+        "productResultText"
+      ).textContent =
+        input === ""
+          ? "Our Products"
+          : visible + " product(s) found";
+
+    }
+
+
+    /* =========================
+       SCROLL TO SHOP
+    ========================= */
+
+    function scrollToShop() {
+
+      document
+        .getElementById("shop")
+        .scrollIntoView({
+          behavior: "smooth"
+        });
+
+    }
+
+
+    /* =========================
+       ESC KEY
+    ========================= */
+
+    document.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (event.key === "Escape") {
+
+          closeCart();
+
+        }
+
+      }
     );
 
-}
 
+    /* =========================
+       INITIAL CART
+    ========================= */
 
+    updateCart();
 
-/* ================= INITIALIZE ================= */
-
-updateCart();
-
-</script>
+  </script>
 
 </body>
 </html>
